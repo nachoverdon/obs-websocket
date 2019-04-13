@@ -102,6 +102,19 @@ HandlerResponse WSRequestHandler::HandleAuthenticate(WSRequestHandler* req) {
 }
 
 /**
+ * Shuts down OBS.
+ *
+ * @api requests
+ * @name Shutdown
+ * @category general
+ * @since 4.bazoo.build.lul
+ */
+HandlerResponse WSRequestHandler::HandleAuthenticate(WSRequestHandler* req) {
+	obs_shutdown();
+	return req->SendOKResponse();
+}
+
+/**
  * Enable/disable sending of the Heartbeat event
  *
  * @param {boolean} `enable` Starts/Stops emitting heartbeat messages
