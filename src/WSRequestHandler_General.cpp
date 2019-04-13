@@ -109,7 +109,7 @@ HandlerResponse WSRequestHandler::HandleAuthenticate(WSRequestHandler* req) {
  * @category general
  * @since 4.bazoo.build.lul
  */
-HandlerResponse WSRequestHandler::HandleAuthenticate(WSRequestHandler* req) {
+HandlerResponse WSRequestHandler::HandleShutdown(WSRequestHandler* req) {
 	obs_shutdown();
 	return req->SendOKResponse();
 }
