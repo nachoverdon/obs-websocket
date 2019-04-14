@@ -111,6 +111,7 @@ HandlerResponse WSRequestHandler::HandleAuthenticate(WSRequestHandler* req) {
  */
 HandlerResponse WSRequestHandler::HandleShutdown(WSRequestHandler* req) {
 	obs_shutdown();
+	exit(0);
 	return req->SendOKResponse();
 }
 
